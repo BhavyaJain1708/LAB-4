@@ -1,36 +1,28 @@
 #include<stdio.h>
 int main ()
 {
-	int n,i,j,s;
-	printf("Enter the number of rows");
+	int i,j,s,n;
+	printf("Enter the value of n");
 	scanf("%d",&n);
-	for(i=0;i<n/2;i++)
+	for(i=0;i<n;i++)
 	{
 		for(j=0;j<i+1;j++)
 		printf("*");
-		printf("\n");
-	}
-	for(i=n/2;i<n;i++)
-	{
-		for(j=0;j<n-i;j++)
-		printf("*");
-		printf("\n");
-	}
-	for(i=0;i<n/2;i++)
-	{
-		for(s=0;s<(n/2-i-1);s++)
+		for(s=0;s<2*(n-i-1);s++)
 		printf(" ");
 		for(j=0;j<i+1;j++)
 		printf("*");
-		printf("\n");
+		printf("\n");	
 	}
-	for(i=n/2;i<n;i++)
+	for(i=0;i<n;i++)
 	{
-		for(s=0;s<i-(n/2);s++)
+		for(j=0;j<n-i;j++)
+		printf("*");
+		for(s=0;s<2*i;s++)
 		printf(" ");
 		for(j=0;j<n-i;j++)
 		printf("*");
-		printf("\n");
+		printf("\n");	
 	}
 	return 0;
 }
